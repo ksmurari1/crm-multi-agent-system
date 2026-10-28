@@ -137,3 +137,56 @@ Create `.env` locally with the API key variable expected by the code (commonly `
 ## Release status
 
 Treat the application as a demo candidate until the regression checklist passes. After verification, commit the code and documentation together and tag the tested baseline (for example, `v1.0.0-demo`).
+
+
+---
+
+## 🖥️ Application Screenshots
+
+### 1. NexaTel CRM — Home Page
+
+The landing page introduces the NexaTel CRM application and its intelligent multi-agent service operations.
+
+![NexaTel CRM Home Page](docs/images/crm_home_page.png)
+
+### 2. Customer Portal
+
+The Customer Portal enables customers to interact with the CRM assistant, check case status, and review service-related updates.
+
+![NexaTel CRM Customer Portal](docs/images/crm_customer_portal.png)
+
+### 3. Employee Portal
+
+The Employee Portal provides access to case investigations, multi-agent workflow execution, investigation reports, and finance approval processes.
+
+![NexaTel CRM Employee Portal](docs/images/crm_employee_portal.png)
+
+---
+
+
+---
+
+## 🏗️ CRM Project Architecture & Workflow
+
+The following visual summarizes the NexaTel CRM Multi-Agent System architecture, end-to-end investigation workflow, AutoGen capabilities, technology stack, design principles, and current implementation boundaries.
+
+![NexaTel CRM Project Architecture, Workflow and AutoGen Features](docs/images/crm-project-workflow.png)
+
+### Architecture Highlights
+
+- **Multi-agent orchestration:** AutoGen coordinates specialized CRM, Customer Service, IT Support, Finance, and Administration agents.
+- **Intelligent employee assistance:** Rule-based routing directs employee queries to relevant specialists.
+- **Investigation workflow:** Employees select a CRM case and investigation scope, execute the workflow, and review consolidated findings.
+- **Execution visibility:** Agent status, timestamps, and execution durations support workflow traceability.
+- **Human-in-the-loop governance:** A Finance Manager approves or rejects compensation proposals and records a reason.
+- **Persistent decision history:** Finance decisions are stored in `data/approval_decisions.json`.
+- **Demo-safe design:** Synthetic CRM data is used, and approval does not trigger an actual credit or refund.
+
+### Implementation Boundaries
+
+This is a demonstration application. Employee query routing is rule-based; RAG, vector search, production authentication, role-based access control, and live financial integrations are outside the current scope.
+
+---
+
+
+**Note:** This demonstration uses synthetic CRM data. Finance decisions require human approval, and actual credit or refund transactions are not executed by the application.
