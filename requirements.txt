@@ -1,0 +1,6 @@
+# NexaTel CRM demo dependencies (Python 3.12 recommended)
+streamlit==1.66.1
+autogen-agentchat==0.7.5
+autogen-ext[openai]==0.7.5
+python-dotenv>=1.0,<2.0
+protobuf==5.29.6

@@ -1,0 +1,170 @@
+
+{
+  "company": "NexaTel Business Services",
+  "customers": [
+    {
+      "customer_id": "CUST-1001",
+      "name": "ACME Manufacturing Ltd",
+      "service_plan": "Business Fiber Premium",
+      "monthly_fee": 15000,
+      "currency": "INR",
+      "account_status": "Active",
+      "contract_start": "2026-01-01",
+      "contact": "Ravi Kumar",
+      "contact_role": "IT Manager"
+    },
+    {
+      "customer_id": "CUST-1002",
+      "name": "BluePeak Retail Pvt Ltd",
+      "service_plan": "Business Fiber Standard",
+      "monthly_fee": 8000,
+      "currency": "INR",
+      "account_status": "Active",
+      "contract_start": "2026-03-01",
+      "contact": "Priya Sharma",
+      "contact_role": "Operations Manager"
+    },
+    {
+      "customer_id": "CUST-1003",
+      "name": "GreenField Logistics Ltd",
+      "service_plan": "Managed Connectivity",
+      "monthly_fee": 22000,
+      "currency": "INR",
+      "account_status": "Active",
+      "contract_start": "2025-11-01",
+      "contact": "Arun Das",
+      "contact_role": "Finance Controller"
+    }
+  ],
+  "support_cases": [
+    {
+      "case_id": "CASE-2045",
+      "customer_id": "CUST-1001",
+      "issue": "Business internet unavailable",
+      "reported_date": "2026-10-20",
+      "priority": "Critical",
+      "status": "Open",
+      "requested_compensation": 5000,
+      "currency": "INR",
+      "customer_comment": "Our business internet has been unavailable for five days. We request compensation for the service disruption."
+    },
+    {
+      "case_id": "CASE-2046",
+      "customer_id": "CUST-1002",
+      "issue": "Intermittent internet connectivity",
+      "reported_date": "2026-10-27",
+      "priority": "Medium",
+      "status": "In Progress",
+      "requested_compensation": 1000,
+      "currency": "INR",
+      "customer_comment": "Connectivity has been intermittent and is affecting store operations."
+    },
+    {
+    "case_id": "CASE-2047",
+    "customer_id": "CUST-1002",
+    "issue": "Business internet outage - compensation review",
+    "reported_date": "2026-10-28",
+    "priority": "High",
+    "status": "Open",
+    "requested_compensation": 3000,
+    "currency": "INR",
+    "customer_comment": "We experienced a three-day service outage and request compensation."
+  }
+  ],
+  "it_incidents": [
+    {
+      "incident_id": "INC-7001",
+      "customer_id": "CUST-1001",
+      "case_id": "CASE-2045",
+      "incident_type": "Network outage",
+      "outage_start": "2026-10-20T09:00:00",
+      "outage_end": null,
+      "verified_outage_days": 5,
+      "service_status": "Unresolved",
+      "technician_notes": "Network equipment failure confirmed. Restoration pending.",
+      "evidence_status": "Verified"
+    },
+    {
+      "incident_id": "INC-7002",
+      "customer_id": "CUST-1002",
+      "case_id": "CASE-2046",
+      "incident_type": "Intermittent connectivity",
+      "outage_start": "2026-10-27T10:00:00",
+      "outage_end": null,
+      "verified_outage_days": 0,
+      "service_status": "Under Investigation",
+      "technician_notes": "Intermittent packet loss reported. Full outage not confirmed.",
+      "evidence_status": "Partial"
+    },
+    {
+    "incident_id": "INC-7003",
+    "customer_id": "CUST-1002",
+    "case_id": "CASE-2047",
+    "incident_type": "Network outage",
+    "outage_start": "2026-10-25T09:00:00",
+    "outage_end": null,
+    "verified_outage_days": 3,
+    "service_status": "Unresolved",
+    "technician_notes": "Network equipment issue confirmed. Restoration pending.",
+    "evidence_status": "Verified"
+}
+  ],
+  "invoices": [
+    {
+      "invoice_id": "INV-1002",
+      "customer_id": "CUST-1001",
+      "billing_period": "2026-10",
+      "amount": 15000,
+      "currency": "INR",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1003",
+      "customer_id": "CUST-1002",
+      "billing_period": "2026-10",
+      "amount": 8000,
+      "currency": "INR",
+      "status": "Paid"
+    }
+  ],
+  "payments": [
+    {
+      "payment_id": "PAY-5001",
+      "invoice_id": "INV-1002",
+      "customer_id": "CUST-1001",
+      "amount": 15000,
+      "currency": "INR",
+      "status": "Settled",
+      "transaction_reference": "TXN-9001"
+    },
+    {
+      "payment_id": "PAY-5002",
+      "invoice_id": "INV-1003",
+      "customer_id": "CUST-1002",
+      "amount": 8000,
+      "currency": "INR",
+      "status": "Settled",
+      "transaction_reference": "TXN-9002"
+    }
+  ],
+  "policies": [
+    {
+      "policy_id": "POL-REF-01",
+      "topic": "Service outage compensation",
+      "rule": "Compensation requests require a verified outage record, a contract eligibility check, a documented calculation and Finance Manager approval. The AI may recommend but cannot approve a credit.",
+      "approval_required": true
+    },
+    {
+      "policy_id": "POL-REF-02",
+      "topic": "Compensation calculation",
+      "rule": "For this demonstration only, use the monthly fee divided by 30 multiplied by verified outage days as a proposed service credit. This is a mock policy, not a real contractual entitlement.",
+      "approval_required": true
+    },
+    {
+      "policy_id": "POL-REF-03",
+      "topic": "Approval controls",
+      "rule": "The Finance Manager must explicitly approve or reject each request and provide a reason. No credit may be marked approved or applied before the decision is recorded.",
+      "approval_required": true
+    }
+  ]
+}

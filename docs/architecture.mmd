@@ -1,0 +1,57 @@
+flowchart TB
+    subgraph Experience["1. Experience Layer"]
+      C[Customer Portal]
+      E[Employee Portal]
+      EA[Employee AI Assistant]
+      INV[Case selector + investigation scope + Run workflow + report]
+      C --> APP[Streamlit app.py]
+      E --> APP
+      APP --> EA
+      APP --> INV
+    end
+
+    subgraph Routing["2. Routing and Orchestration"]
+      ROUTER[Rule-based query router]
+      WF[Full case investigation workflow]
+      ORCH[CRM Orchestrator]
+      EA --> ROUTER
+      INV --> WF
+      ROUTER --> ORCH
+      WF --> ORCH
+    end
+
+    subgraph Agents["3. AutoGen Agent Layer"]
+      CS[Customer Service Agent]
+      IT[IT Support Agent]
+      FIN[Finance Agent]
+      ADM[Administration Agent]
+      ORCH --> CS
+      ORCH --> IT
+      ORCH --> FIN
+      ORCH --> ADM
+      ROUTER --> CS
+      ROUTER --> IT
+      ROUTER --> FIN
+      ROUTER --> ADM
+    end
+
+    subgraph DataTools["4. Tools and Data"]
+      TOOLS[tools/crm_tools.py]
+      JSON[(data/crm_data.json)]
+      DEC[(data/approval_decisions.json)]
+      CS --> TOOLS
+      IT --> TOOLS
+      FIN --> TOOLS
+      ADM --> TOOLS
+      TOOLS --> JSON
+    end
+
+    FIN --> HUMAN[Finance Manager: approve / reject with reason]
+    HUMAN --> DEC
+    APP --> DEC
+
+    ACT[Cross-cutting: agent states, actions, timestamps, elapsed time, session-only chat history]
+    ACT -.-> APP
+
+    LIMITS[Demo boundaries: local JSON, rule-based routing; no RAG / KG / live web search; no real payment execution]
+    JSON -.-> LIMITS

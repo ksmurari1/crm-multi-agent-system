@@ -1,0 +1,26 @@
+
+# Secrets
+.env
+.env.*
+
+# Allow the safe example file
+!.env.example
+
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

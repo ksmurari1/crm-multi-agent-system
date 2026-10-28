@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1240" viewBox="0 0 1800 1240">
+<rect width="100%" height="100%" fill="#F6F1E8"/>
+<style>
+.title { font: 700 34px Arial, sans-serif; fill: #242A31; }
+.subtitle { font: 400 17px Arial, sans-serif; fill: #657180; }
+.section { font: 700 17px Arial, sans-serif; fill: #2F75B5; letter-spacing: 2px; }
+.h { font: 700 19px Arial, sans-serif; fill: #242A31; }
+.body { font: 400 15px Arial, sans-serif; fill: #242A31; }
+.small { font: 400 13px Arial, sans-serif; fill: #657180; }
+.tiny { font: 400 12px Arial, sans-serif; fill: #657180; }
+.white { fill: #FFFFFF; }
+.arrow { stroke: #657180; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+.dash { stroke-dasharray: 7 6; }
+</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#657180"/></marker></defs>
+<text x="70" y="65" class="title">NexaTel CRM | AutoGen Multi-Agent Architecture</text>
+<text x="70" y="96" class="subtitle">Customer support • employee AI assistant • case investigation • human-controlled finance decisions</text>
+
+<text x="70" y="145" class="section" text-anchor="start">1  EXPERIENCE LAYER</text>
+<rect x="70" y="165" width="510" height="118" rx="18" fill="#FFFCF6" stroke="#C9D3DD" stroke-width="2"/>
+<text x="95" y="198" class="h" text-anchor="start">Customer Portal</text>
+<text x="95" y="225" class="body" text-anchor="start">Customer conversation • case / compensation status</text>
+<text x="95" y="251" class="small" text-anchor="start">Session conversation context</text>
+<rect x="620" y="165" width="1110" height="118" rx="18" fill="#FFFCF6" stroke="#C9D3DD" stroke-width="2"/>
+<text x="645" y="198" class="h" text-anchor="start">Employee Portal</text>
+<text x="645" y="225" class="body" text-anchor="start">Employee AI Assistant • suggested prompts • chat history</text>
+<text x="645" y="251" class="small" text-anchor="start">Case dropdown • investigation scope • Run workflow • report</text>
+<text x="70" y="326" class="section" text-anchor="start">2  ROUTING &amp; ORCHESTRATION</text>
+<rect x="70" y="350" width="790" height="142" rx="18" fill="#E5F0FA" stroke="#2F75B5" stroke-width="2"/>
+<text x="95" y="383" class="h" text-anchor="start">Employee Assistant — rule-based query router</text>
+<text x="95" y="411" class="body" text-anchor="start">Classifies intent and selects relevant specialist agents</text>
+<text x="95" y="440" class="body" text-anchor="start">Tracks invoked / skipped agents, action, timestamps and elapsed time</text>
+<text x="95" y="468" class="small" text-anchor="start">AutoGen AgentChat • sequential specialist execution</text>
+<rect x="900" y="350" width="830" height="142" rx="18" fill="#F1E5D8" stroke="#765037" stroke-width="2"/>
+<text x="925" y="383" class="h" text-anchor="start">Full Case Investigation Workflow</text>
+<text x="925" y="411" class="body" text-anchor="start">core/workflow.py coordinates the investigation sequence</text>
+<text x="925" y="440" class="body" text-anchor="start">Runs case evidence review and assembles findings / resolution report</text>
+<text x="925" y="468" class="small" text-anchor="start">Separate from employee chat and Finance Manager decision</text>
+<text x="70" y="535" class="section" text-anchor="start">3  AUTOGEN AGENT LAYER</text>
+<rect x="70" y="560" width="300" height="130" rx="18" fill="#E5F0FA" stroke="#2F75B5" stroke-width="2"/>
+<text x="220" y="591" class="h" text-anchor="middle">CRM Orchestrator</text>
+<text x="220" y="620" class="small" text-anchor="middle">Coordinates work</text>
+<text x="220" y="644" class="small" text-anchor="middle">Synthesizes final response</text>
+<text x="220" y="670" class="tiny" text-anchor="middle">AutoGen AssistantAgent</text>
+<rect x="405" y="560" width="300" height="130" rx="18" fill="#FFFCF6" stroke="#C9D3DD" stroke-width="2"/>
+<text x="555" y="591" class="h" text-anchor="middle">Customer Service</text>
+<text x="555" y="620" class="small" text-anchor="middle">Customer / case details</text>
+<text x="555" y="644" class="small" text-anchor="middle">Customer-facing status</text>
+<text x="555" y="670" class="tiny" text-anchor="middle">AutoGen AssistantAgent</text>
+<rect x="740" y="560" width="300" height="130" rx="18" fill="#FFFCF6" stroke="#C9D3DD" stroke-width="2"/>
+<text x="890" y="591" class="h" text-anchor="middle">IT Support</text>
+<text x="890" y="620" class="small" text-anchor="middle">Incidents / outage evidence</text>
+<text x="890" y="644" class="small" text-anchor="middle">Technical service status</text>
+<text x="890" y="670" class="tiny" text-anchor="middle">AutoGen AssistantAgent</text>
+<rect x="1075" y="560" width="300" height="130" rx="18" fill="#F1E5D8" stroke="#765037" stroke-width="2"/>
+<text x="1225" y="591" class="h" text-anchor="middle">Finance</text>
+<text x="1225" y="620" class="small" text-anchor="middle">Billing / policy / calculation</text>
+<text x="1225" y="644" class="small" text-anchor="middle">Proposes credit; cannot approve</text>
+<text x="1225" y="670" class="tiny" text-anchor="middle">AutoGen AssistantAgent</text>
+<rect x="1410" y="560" width="300" height="130" rx="18" fill="#FFFCF6" stroke="#C9D3DD" stroke-width="2"/>
+<text x="1560" y="591" class="h" text-anchor="middle">Administration</text>
+<text x="1560" y="620" class="small" text-anchor="middle">Case / customer validation</text>
+<text x="1560" y="644" class="small" text-anchor="middle">Administrative policy context</text>
+<text x="1560" y="670" class="tiny" text-anchor="middle">AutoGen AssistantAgent</text>
+<path d="M465 492 V520 H220 V558" class="arrow"/>
+<path d="M465 520 H555 V558" class="arrow"/>
+<path d="M465 520 H890 V558" class="arrow"/>
+<path d="M465 520 H1225 V558" class="arrow"/>
+<path d="M465 520 H1560 V558" class="arrow"/>
+<path d="M1315 492 V520 H220 V558" class="arrow dash"/>
+<path d="M1315 520 H555 V558" class="arrow dash"/>
+<path d="M1315 520 H890 V558" class="arrow dash"/>
+<path d="M1315 520 H1225 V558" class="arrow dash"/>
+<path d="M1315 520 H1560 V558" class="arrow dash"/>
+<text x="70" y="735" class="section" text-anchor="start">4  TOOLS, DATA &amp; HUMAN CONTROL</text>
+<rect x="70" y="760" width="500" height="150" rx="18" fill="#E4F3EA" stroke="#2D7D5A" stroke-width="2"/>
+<text x="95" y="794" class="h" text-anchor="start">CRM Tool Layer  |  tools/crm_tools.py</text>
+<text x="95" y="823" class="body" text-anchor="start">• Load customer / case / incident records</text>
+<text x="95" y="847" class="body" text-anchor="start">• Billing, payment and policy lookups</text>
+<text x="95" y="871" class="body" text-anchor="start">• Illustrative proposed-credit calculation</text>
+<rect x="620" y="760" width="510" height="150" rx="18" fill="#FFFCF6" stroke="#C9D3DD" stroke-width="2"/>
+<text x="645" y="794" class="h" text-anchor="start">Structured JSON Data</text>
+<text x="645" y="823" class="body" text-anchor="start">• data/crm_data.json</text>
+<text x="645" y="847" class="body" text-anchor="start">• Customers • cases • IT incidents</text>
+<text x="645" y="871" class="body" text-anchor="start">• Invoices • payments • policies</text>
+<rect x="1180" y="760" width="550" height="150" rx="18" fill="#F0EAF8" stroke="#7656A5" stroke-width="2"/>
+<text x="1205" y="794" class="h" text-anchor="start">Human Finance Manager Decision</text>
+<text x="1205" y="823" class="body" text-anchor="start">• Approve / reject with required reason</text>
+<text x="1205" y="847" class="body" text-anchor="start">• Persisted audit history in approval_decisions.json</text>
+<text x="1205" y="871" class="body" text-anchor="start">• Approval ≠ credit/refund execution</text>
+<path d="M220 690 V720 H320 V758" class="arrow"/>
+<path d="M555 690 V720 H320 V758" class="arrow"/>
+<path d="M890 690 V735 H870 V758" class="arrow"/>
+<path d="M1225 690 V720 H1455 V758" class="arrow"/>
+<path d="M1560 690 V720 H1455 V758" class="arrow"/>
+<path d="M570 835 H618" class="arrow"/>
+<path d="M1130 835 H1178" class="arrow"/>
+<rect x="70" y="960" width="1660" height="100" rx="16" fill="#EAE5DC" stroke="#D2C8B8" stroke-width="1.5"/>
+<text x="95" y="992" class="section" text-anchor="start">CROSS-CUTTING BEHAVIOUR</text>
+<text x="95" y="1023" class="body" text-anchor="start">Session-only chat history  •  agent activity strip  •  runtime durations  •  separate investigation state  •  human approval gate  •  .env secret configuration</text>
+<rect x="70" y="1090" width="1660" height="95" rx="14" fill="#FFF8E8" stroke="#D9C59D" stroke-width="1.5"/>
+<text x="95" y="1123" class="h" text-anchor="start">DEMO BOUNDARIES</text>
+<text x="95" y="1152" class="body" text-anchor="start">Local JSON persistence • rule-based routing • no RAG / vector database / knowledge graph / live web search • no production authentication or payment execution</text>
+<text x="1730" y="1215" class="tiny" text-anchor="end">Architecture view | NexaTel CRM</text>
+</svg>
